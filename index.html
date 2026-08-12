@@ -1,1 +1,171 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrTekPet22 | Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['DM Sans', 'sans-serif'],
+                        mono: ['DM Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e40af',
+                            sky: '#0284c7',
+                            brown: '#8c310d',
+                            orange: '#c85a17',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .liquid-glass {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.05), inset 0 1px 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .liquid-btn {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .liquid-btn:hover {
+            background: rgba(255, 255, 255, 0.7);
+            border-color: rgba(200, 90, 23, 0.4);
+            box-shadow: 0 10px 25px -5px rgba(200, 90, 23, 0.15), 0 0 15px rgba(30, 64, 175, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .liquid-input {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+        }
+
+        .liquid-input:focus {
+            background: rgba(255, 255, 255, 0.65);
+            border-color: rgba(30, 64, 175, 0.5);
+            box-shadow: 0 0 15px rgba(30, 64, 175, 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen relative flex flex-col items-center justify-between p-4 sm:p-6 md:p-8 antialiased">
+
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-blue-300/40 rounded-full blur-[100px] animate-pulse"></div>
+        <div class="absolute top-1/4 -right-24 w-96 h-96 bg-orange-300/35 rounded-full blur-[110px]"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-sky-200/50 rounded-full blur-[90px]"></div>
+        <div class="absolute bottom-10 right-1/4 w-80 h-80 bg-amber-200/50 rounded-full blur-[120px]"></div>
+    </div>
+
+    <main class="relative z-10 w-full max-w-lg mx-auto flex flex-col items-center gap-5 my-auto py-6">
+
+        <div class="liquid-glass w-full rounded-3xl p-6 text-center flex flex-col items-center relative overflow-hidden">
+            <div class="relative group mb-3">
+                <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-white/80 bg-white/40 p-1 shadow-md">
+                    <img 
+                        src="favicon.svg" 
+                        alt="MrTekPet22 Avatar" 
+                        class="w-full h-full object-cover rounded-full"
+                        onerror="this.onerror=null; this.src='https://placehold.co/150x150/1e40af/ffffff?text=MrTekPet22';"
+                    >
+                </div>
+            </div>
+
+            <div class="flex items-center justify-center gap-1.5 mb-4">
+                <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
+                    MrTekPet22
+                </h1>
+            </div>
+
+            <div class="w-full max-w-xs">
+                <button onclick="copyLink()" class="w-full liquid-btn py-2 px-4 rounded-xl text-xs font-semibold text-slate-700 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-share-nodes text-brand-orange"></i> Share Profile
+                </button>
+            </div>
+        </div>
+
+        <div id="linksContainer" class="w-full flex flex-col gap-2.5">
+    </div>
+
+    <div id="linksContainer" class="w-full flex flex-col gap-2.5">
+
+        <a href="https://mrtekpet22.github.io/Links/" target="_blank" rel="noopener" data-title="Official Links" class="link-item liquid-btn w-full rounded-2xl p-3.5 flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-blue-600/10 border border-blue-600/20 flex items-center justify-center text-brand-blue text-base">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <span class="text-sm font-semibold text-slate-800">Visit Official Page</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-slate-400 group-hover:text-brand-blue text-xs"></i>
+        </a>
+
+    </div>
+
+    <footer class="text-center text-xs text-slate-500 mt-2 font-mono">
+        <p>© <span id="year"></span> MrTekPet22. All rights reserved.</p>
+    </footer>
+
+</main>
+
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 liquid-glass bg-white/80 text-slate-800 border border-blue-500/30 px-4 py-2 rounded-xl shadow-lg flex items-center gap-2 translate-y-16 opacity-0 transition-all duration-200 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-brand-orange text-sm"></i>
+        <span id="toastMsg" class="text-xs font-semibold">Copied to clipboard!</span>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.remove('translate-y-16', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-16', 'opacity-0');
+            }, 2500);
+        }
+
+        function copyLink() {
+            const dummy = document.createElement('input');
+            document.body.appendChild(dummy);
+            dummy.value = 'https://mrtekpet22.github.io/Links/';
+            dummy.select();
+            try {
+                document.execCommand('copy');
+                showToast("Profile link copied!");
+            } catch (e) {
+                showToast("Copied link!");
+            }
+            document.body.removeChild(dummy);
+        }
+    </script>
+</body>
+</html>
