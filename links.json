@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Visit Official Page",
+    "url": "https://mrtekpet22.github.io/Links/",
+    "icon": "fa-solid fa-globe",
+    "target": "_blank"
+  },
+  {
+    "title": "GitHub Profile",
+    "url": "https://github.com/MrTekPet22",
+    "icon": "fa-brands fa-github",
+    "target": "_blank"
+  }
+]
